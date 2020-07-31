@@ -1,0 +1,1327 @@
+/* Header */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.bar{
+    width: 100%;
+    height: 8em;
+    position: fixed;
+    z-index: 400;
+    transition: 0.5s;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.6)), url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    right: 5rem;
+    left: 5rem;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.menu-toggle{
+    position: fixed;
+    top: 2.5rem;
+    right: 2rem;
+    color: #eeee;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 2000;
+    display: none;
+}
+
+nav{
+    padding-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand-mobile{
+    padding-top: 2.5rem;
+    left: -2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    display: none;
+    z-index: 2000;
+	font-size: 3rem;
+    font-weight: 300;
+    width: 100%;
+    background-color: #000000;
+	transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+.brand span{
+    color: #0abdc6;
+    font-weight: 1000;
+}
+
+.brand-mobile span{
+    color: #0abdc6;
+    font-weight: 1000;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+	list-style: none;
+    /* transform: translateX(100rem);
+	animation: slideIn .5s forwards; */
+}
+
+nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+nav ul li a:last-child{
+    margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+/* Github */
+.github{
+    background-color: #1B1B1B;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.github-container{
+    padding-top: 13rem;
+    padding-left: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn{
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 3px solid #e74c3c;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: flex;
+    align-self: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto Cn', sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover, .btn:focus{
+    color: #141414;
+    outline: 0;
+}
+
+.btn:active{
+    color: #fff;
+}
+
+.btn:after{
+    color: #fff;
+}
+
+.fifth{
+    border-color: #ffff;
+    border-radius: 3rem;
+    color: #ffff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.fifth:after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #ffff;
+    color: #ffff;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+}
+
+
+.fifth:hover{
+    color: #141414;
+}
+
+.fifth:link:hover{
+    color: #141414;
+}
+
+.fifth:hover:after{
+    width: 110%;
+    color: #141414;
+}
+
+.fifth:active{
+    color: #ffff;
+}
+
+.fifth:visited{
+    color: #ffff;
+}
+
+.fifth:focus{
+    color: #fff;
+}
+
+.fifth:focus:hover{
+    color: #141414;
+}
+
+
+.github-seemore{
+    align-items: left;
+    margin-top: 25rem;
+    margin-left: -93rem;
+    font-size: 12px;
+}
+
+.github-header{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.github .github-container p{
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.github .github-container .github-side span{
+    font-weight: bold;
+}
+
+.github-side{
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.github2{
+    background-color: #141414;
+    width: 100%;
+    height: 105vh;
+    color: white;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    align-items: center;
+}
+
+.github2-head{
+    padding-top: 7rem;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.github2 h6{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.projects h4{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.projects p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.card{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    margin: 5rem;
+}
+
+#card1{
+    background-color: #007bff;
+}
+
+#card2{
+    background-color: #6610f2;
+}
+
+#card3{
+    background-color: #dc3545;
+}
+
+.card img{
+    border-radius: 15px 15px 0 0;
+}
+ 
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    margin: 5rem;
+}
+
+.cardcontainer{
+    padding: 2rem;
+}
+
+
+  
+/* Demo styles */
+.talenthouse{
+    background-color: #1b1b1b;
+    height: 120vh;
+    color: white;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    align-items: center;
+}
+
+.talenthouse .github2-head{
+    padding-top: 4rem;
+}
+
+.talenthouse-header{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.talenthouse h6{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.talenthouse h4{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.talenthouse p{
+    font-size: 18px;
+    text-align: center;
+    text-transform: none;
+}
+
+.wrapper{
+    height: 65%;
+    display: flex;
+    flex-flow: column wrap;
+    /* display: block; */
+    overflow-x: scroll;
+    background-color: #2e874d;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    scrollbar-width: thin;
+    /* align-items: center; */
+    /* overflow-x: auto; */
+}
+
+.wrapper::-webkit-scrollbar{
+    /* width: 2; */
+    width: 5px;
+    height: 5px;
+    background-color: #2e874d;
+}
+
+.wrapper::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 10px;
+    }
+
+.wrapper::-webkit-scrollbar-thumb:hover{
+    background-color: #ffff;
+    /* border:1px solid #333333; */
+}
+
+.wrapper::-webkit-scrollbar-thumb:active{
+    background-color: #ffff;
+    /* border:1px solid #333333; */
+} 
+
+.item{
+    /* float: left; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 15%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: #141414;
+}
+
+#unique{
+    /* width: 100%; */
+}
+
+#item-last{
+    /* width: 2%; */
+    width: 20%;
+}
+ 
+.item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.1);
+}
+
+.itemcontainer{
+    padding: 2rem;
+}
+
+.talenthouse-seemore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobbies{
+    height: 120vh;
+    background-color: #141414;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+}
+
+.hobbies h6{
+    color: #fff;
+
+}
+
+.badge-holder{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    float: left;
+}
+
+.tryhackme-badge{
+    /* padding-top: 3rem; */
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    /* margin: 0 auto; */
+    zoom: 1.5;
+    /* -moz-transform: scale(2); */
+}
+
+:-moz-any(.tryhackme-badge){
+    padding-top: 2rem;
+    padding-left: 7.5rem;
+    -moz-transform: scale(1.5);
+    
+}
+
+.hobbies .left-side{
+    height: 80%;
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 15rem;
+    padding-left: 8rem;
+}
+
+.hobbies p{
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+}
+
+.hobbies .right-side{
+    height: 80%;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-right: 8rem;
+}
+
+.icons{
+    margin-top: 12rem;
+    padding-top: 2rem;
+}
+
+.icons ul{
+    display: flex;
+}
+
+.icons ul li{
+    list-style: none;
+    padding: 2rem;
+}
+
+.contact{
+    height: 80vh;
+    width: 100%;
+    background-color: #141414;
+}
+
+.contact h6{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffff;
+    text-align: left;
+}
+
+.contact .github2-head{
+    margin-left: 16rem;
+}
+
+.contact h4{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact input[type=submit]{
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: #03a9f4;
+    color: white;
+    cursor: pointer;
+}
+
+.contact input[type=submit]:hover{
+    background-color: #35baf6;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.contact input[type=text], select{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: #141414;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    box-sizing: border-box;
+    /* cursor: pointer; */
+}
+
+.contact textarea{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: #141414;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 80%;
+    resize: none;
+    border: none;
+    box-sizing: border-box;
+    /* cursor: pointer; */
+}
+
+.contact .email-form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact form{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    width: 80%;
+}
+
+.contact-left-side{
+    padding-top: 8.5rem;
+    height: 80%;
+    width: 45%;
+    margin: 0 auto;
+    /* background-color: blue; */
+}
+
+.contact-right-side{
+    padding-top: 5rem;
+    height: 80%;
+    width: 45%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+footer{
+    background-color: black;
+    /* height: 20vh; */
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    color: #fff;
+}
+
+.footer-text{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+footer h5{
+    font-weight: lighter; 
+    color: #fff; 
+    font-size: 15px; 
+    font-family: sans-serif; 
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+.socials{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 5rem;
+}
+
+.socials ul{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.socials ul li{
+    list-style: none;
+    /* padding: 2rem; */
+}
+
+.socials ul li img{
+    width: 50%;
+    height: auto;
+}
+
+:-moz-any(footer){
+    height: 25vh;
+}
+
+.header-content{
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 30rem;
+}
+
+.header-content h2{
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "Roboto Cn", sans-serif;
+}
+
+.header-content h3{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    /* text-transform: uppercase; */
+    font-family: "Roboto Cn", sans-serif;
+}
+
+
+.socials ul li img:hover{
+    filter: invert(100%);
+}
+
+
+/* width */
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+  
+/* Track */
+body::-webkit-scrollbar-track{
+    /* display: none; */
+    /* background: transparent; */
+    background-color: black;
+}
+   
+/* Handle */
+body::-webkit-scrollbar-thumb{
+    background: #0abdc6 !important; 
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 700px){
+
+    .header-content{
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+        margin-top: 25rem;
+    }
+    
+    .header-content h2{
+        text-align: center;
+        color: #fff;
+        font-size: 50px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: "Roboto Cn", sans-serif;
+    }
+
+    .header-content h3{
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: "Roboto Cn", sans-serif;
+    }
+
+    .socials{
+        width: 90%;
+        padding-left: 1.6rem;
+    }
+
+    .socials ul li img{
+        width: 70%;
+        height: auto;
+    }
+
+    .contact{
+        height: auto;
+        width: 100%;
+        background-color: #141414;
+        padding-bottom: 4rem;
+    }
+    
+    .contact h6{
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffff;
+        text-align: center;
+    }
+    
+    .contact .github2-head{
+        margin: 0 auto;
+        padding-top: 4rem;
+    }
+    
+    .contact h4{
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .contact-left-side{
+        padding-top: 3rem;
+        height: 80%;
+        width: 90%;
+        margin: 0 auto;
+        /* background-color: blue; */
+    }
+    
+    .contact-right-side{
+        padding-top: 3rem;
+        height: 80%;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        /* background-color: red; */
+    }
+
+    .contact input[type=text], select{
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: #141414;
+        padding: 7px;
+        border-radius: 5px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        box-sizing: border-box;
+        /* cursor: pointer; */
+    }
+    
+    .contact textarea{
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: #141414;
+        padding: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        width: 100%;
+        height: 15rem;
+        resize: none;
+        border: none;
+        box-sizing: border-box;
+        /* cursor: pointer; */
+    }
+    
+
+
+
+
+
+    .hobbies{
+        height: auto;
+        width: 100%;
+        background-color: #141414;
+        /* display: block; */
+        display: flex;
+        flex-flow: column wrap;
+        flex-direction: column;
+        align-items: center;
+
+        display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* optional */
+    /* -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start; */
+    }
+    
+    .hobbies .github-header{
+        color: #fff;
+        align-content: center;
+        text-align: center;
+        margin: 0 auto;
+    
+    }
+    
+    .badge-holder{
+        padding-top: 1.5rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        float: left;
+        margin: 0 auto;
+        padding-right: 4rem;
+    }
+    
+    .tryhackme-badge{
+        /* padding-top: 3rem; */
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        /* margin: 0 auto; */
+        zoom: 1;
+        /* -moz-transform: scale(2); */
+    }
+    
+    :-moz-any(.tryhackme-badge){
+        padding-top: 2rem;
+        padding-left: 7.5rem;
+        -moz-transform: scale(1);
+        
+    }
+    
+    .hobbies .left-side{
+        height: auto;
+        width: 80%;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 4rem;
+
+        -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    }
+    
+    .hobbies p{
+        font-size: 13px;
+        color: #fff;
+        text-align: justify;
+    }
+    
+    .hobbies .right-side{
+        display: flex;
+        flex-flow: column wrap;
+        flex-direction: column;
+
+        text-align: center;
+        height: auto;
+        width: 90%;
+        align-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        padding-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+
+        -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    }
+    
+    .icons{
+        margin-top: 0rem;
+        padding-top: 2rem;
+    }
+    
+    .icons ul{
+        display: flex;
+    }
+    
+    .icons ul li{
+        list-style: none;
+        padding: 0.7rem;
+    }
+
+    .icons img{
+        width: 80%;
+        height: auto;
+    }
+
+
+
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav{
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 37vh;
+        text-align: center;
+    }
+
+    nav ul{
+        margin-left: -10rem;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        background-color: black;
+        z-index: 500;
+        transform: translateY(-100rem);
+	    animation: slideIn .5s forwards;
+    }
+
+    nav ul li{
+        margin-top: 1.5rem;
+    }
+
+    nav ul li:hover{
+        background-color: crimson;
+    }
+
+    nav ul li a{
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    nav ul:hover::before,
+    nav ul:hover::after{
+        width: 100%;
+        background-color: crimson;
+    }
+
+    .brand{
+        display: none;
+    }
+
+    .brand-mobile{
+        display: block;
+        margin-left: -5rem;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        z-index: 2000;
+    }
+
+    .overlay.menu-open,
+    nav.menu-open{
+        display: flex;
+        transform: scale(1);
+        opacity: (1);
+    }
+
+    .bar{
+        display: none;
+    }
+
+    /* Github1 */
+    .github{
+        height: 60vh;
+    }
+
+    .github-container{
+        margin-top: 7rem;
+        flex-direction: column;
+    }
+
+    .github-header{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: -15rem;
+        margin-left: -7rem;
+        text-align: center;
+    }
+
+    .github-side{
+        width: 80%;
+        height: 50%;
+        margin-left: -7rem;
+        margin-top: -30rem;
+        margin-bottom: -15rem;
+        text-align: center;
+    }
+    
+    .github-seemore{
+        align-items: center;
+        margin-top: -40rem;
+        margin-left: -6rem;
+        font-size: 12px;
+    }
+
+    .github .github-container p{
+        font-size: 15px;
+        text-decoration: none;
+        text-transform: none;
+    }
+
+    .github2{
+        height: auto;
+    }
+
+    .projects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .projects h6{
+        font-size: 15px;
+    }
+
+    .projects p{
+        font-size: 13px;
+    }
+
+    .github2-head{
+        padding-top: 3rem;
+    }
+
+    .card{
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        margin: 2rem;
+    }
+    
+    .cardcontainer{
+        padding: 1.5rem;
+    }
+
+    .talenthouse p{
+        font-size: 15px;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .talenthouse .github2-head img{
+        width: "10%";
+        height: auto;
+    }
+
+    .talenthouse{
+        height: 90vh;
+    }
+
+    .talenthouse .wrapper{
+        height: 55%;
+    }
+
+    .talenthouse .item{
+        width: 38%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .talenthouse h4{
+        font-size: 12px;
+    }
+
+    #item-last{
+        width: 1.5%;
+        /* width: 20%; */
+    }
+}
+
+@media screen and (max-width: 400px){
+    .container{
+        top: 0em;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav{
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 30vh;
+        text-align: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        background-color: black;
+        z-index: 500;
+
+        transform: translateY(-100rem);
+	    animation: slideIn .5s forwards;
+    }
+
+    nav ul li{
+        margin-top: 1.5rem;
+    }
+
+    nav ul li:hover{
+        background-color: crimson;
+    }
+
+    nav ul li a{
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    nav ul:hover::before,
+    nav ul:hover::after{
+        width: 100%;
+        background-color: crimson;
+    }
+
+    .brand{
+        display: none;
+    }
+
+    .brand-mobile{
+        display: block;
+        margin-left: -5rem;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        z-index: 2000;
+    }
+
+    .overlay.menu-open,
+    nav.menu-open{
+        display: flex;
+        transform: scale(1);
+        opacity: (1);
+    }
+
+    .bar{
+        display: none;
+    }
+
+    /* Github1 */
+    .github-container{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .github-header{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+}

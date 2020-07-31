@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pau Cabral</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="static/img/placeholder-icon.png">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-reboot.css"> -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <header>
+            <div class="menu-toggle" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="overlay"></div>
+            <div class="bar"></div>
+            <div id="container" class="container">
+                <h1 class="brand-mobile">  <a href="#">Pau<span>Cabral</span></a> </h1>
+                <nav>
+                    <h1 class="brand">  <a href="#">Pau<span>Cabral</span></a> </h1>
+                    <ul>
+                        <li>    <a href="#" id="scrollingA" class="nav-item">Home</a>    </li>
+                        <li>    <a href="#projects" id="scrollingA" class="nav-item">Projects</a>    </li>
+                        <li>    <a href="#arts" id="scrollingA" class="nav-item">Arts</a>    </li>
+                        <li>    <a href="#hobbies" id="scrollingA" class="nav-item">About</a>    </li>
+                        <!-- <li>    <a href="#" class="nav-item">About</a>    </li> -->
+                        <li>    <a href="#contact" id="scrollingA" class="nav-item">Contact</a>    </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content">
+                <h2>Eat. Sleep. Game. Code.</h2>
+                <!-- <h3>&lt;==repeat==&gt;</h3> -->
+                <h3>|&nbsp;&nbsp;&nbsp;repeat&nbsp;&nbsp;&nbsp;|</h3>
+                <div class="talenthouse-seemore">
+                    <a id="scrollingA" class="btn fifth" href="#hobbies">Learn More</a>
+                </div>
+            </div>
+        </header>
+        <script>
+            var open = document.getElementById('hamburger');
+            var changeIcon = true;
+            
+            open.addEventListener("click", function(){
+          
+                var overlay = document.querySelector('.overlay');
+                var nav = document.querySelector('nav');
+                var icon = document.querySelector('.menu-toggle i');
+          
+                overlay.classList.toggle("menu-open");
+                nav.classList.toggle("menu-open");
+          
+                if (changeIcon) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-times");
+          
+                    changeIcon = false;
+                }
+                
+                else {
+                    icon.classList.remove("fa-times");
+                    icon.classList.add("fa-bars");
+                    changeIcon = true;
+                }
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if (scroll >= 80){
+                        var x = window.matchMedia("(max-width: 700px)")
+                        if (x.matches){
+                            $(".container").css('top', '0em');
+                            $(".bar").css('background', 'none');
+                        }
+                        else{
+                        $(".container").css('top', '-5em');
+                        $(".bar").css('background-color', 'black');
+                        }
+                    }
+                    else{
+                        $(".container").css('top', '0em');
+                        $(".bar").css('background', 'none');	
+                    }
+                })
+            })
+        </script>
+        
+        <div id="hobbies" class="hobbies">
+            <div class="left-side">
+                <!-- <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Placerat duis ultricies lacus sed. Erat imperdiet sed euismod nisi porta lorem. Iaculis at erat pellentesque adipiscing commodo elit at. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Dictum sit amet justo donec enim diam vulputate ut pharetra.
+                </p> -->
+                <p>
+                    Hi! I am <b>Pau</b>, a Computer Engineering student.<br><br>When I am not doing any school works, I usually work on personal projects when inspiration comes in. This could be either doing an artwork that has been on my head for quite some time, building random things through code and present hardware, or learning something new for my own. <br><br>Currently, I am focusing on Penetration Testing through Capture the Flag challenges and walkthroughs provided at TryHackMe. <br><br>On rest days, I usually play video games, play the guitar, read comics, watch movies, play basketball (when there is no pandemic ;)), or just waste my time all-day on Reddit. I am a big fan of STAR WARS, and show much of my love for the franchise by either playing STAR WARS Battlefront II or rewatching the movies and the canon animated shows all day long. I also collect physical comic books, mainly on Spider-Man titles, which occupy much of the issues/trade paperbacks/hardcovers that I collect.<br><br><br>P.S. Penguins are the best! Waddle on! Noot Noot!
+                </p>
+            </div>
+            <div class="right-side">
+                <h6 class="github-header">Currently...</h6>
+                <div class="badge-holder">
+                    <div class="tryhackme-badge">
+                        <script src="https://tryhackme.com/badge/117181"></script>
+                    </div>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li><img src="static/img/game.png"></li>
+                        <li><img src="static/img/laptop.png"></li>
+                        <li><img src="static/img/movie.png"></li>
+                    </ul>
+                    <ul>
+                        <!-- <li><img src="static/img/test-icon-img.png"></li>
+                        <li><img src="static/img/test-icon-img.png"></li>
+                        <li><img src="static/img/test-icon-img.png"></li> -->
+                        <li><img src="static/img/guitar.png"></li>
+                        <li><img src="static/img/ball.png"></li>
+                        <li><img src="static/img/comic.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects" class="github">
+            <div class="github-container">
+                <div><h6 class="github-header" >CpE Projects</br>at work</h6></div>
+                <div class="github-seemore">
+                    <a class="btn fifth" href="https://www.github.com/paucabral">View Projects</a>
+                </div>
+                <div class="github-side">
+                    <p>See Computer Engineering projects involving Systems Administration, Embedded Systems, and more.
+                        <br>
+                        <br>
+                        <span>github.com/paucabral <img src="static/img/github-icon.png" height="auto" width="4%"> </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="github2">
+            <div class="github2-head"><h6>Projects Preview</h6></div>
+            <div class="projects">
+                <div id="card1" class="card">
+                    <img src="static/img/proj2.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <!-- <h4>John Doe</h4>  -->
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                        <h4>IgNITE</h4>
+                        <p>A GUI tool for Linux, made using Python 3 with PyQt5 library. This tool provides a graphical user interface for common Linux administration tasks by binding functionalities with BASH scripts.<br>&nbsp;<br>&nbsp;</p>
+                    </div>
+                  </div>
+                  <div id="card2" class="card">
+                    <img src="static/img/proj1.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <!-- <h4>John Doe</h4>  -->
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                        <h4>Smart Bag</h4>
+                        <p>An embeded systems project that presents a bag with "smart" functionalities. Powered by Arduino Mega, its core functionality deals with the use of biometrics through fingerprint scanner, to securely unlock a bag; and allows for both web and text notifications for alerts.</p>
+                    </div>
+                  </div>
+                  <div id="card3" class="card">
+                    <img src="static/img/proj3.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <!-- <h4>John Doe</h4>  -->
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                        <h4>
+                            Gas Detection System
+                        </h4>
+                        <p>An IOT system which implements gas detection using the MQ-2 gas sensor with Arduino, inline with web and text notifications. Built with its own web application, it allows the user to track if harmful air particles are present in a room where the device is installed.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div id="arts" class="talenthouse">
+            <div class="github2-head">
+                <h6>Artworks</h6>
+                <br>
+                <p>Check out more artworks at <b>talenthouse.com/jose-paulo-cabral</b> <img src="static/img/talenthouse-icon.png" height="auto" width="1%"> </p>
+            </div>
+            <div class="wrapper">
+                <div id="item1" class="item">
+                    <img src="static/img/animation-loop.gif" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>I am Batman</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item2" class="item">
+                    <img src="static/img/the_chosen_one_AnakinSkywalker_var.jpg" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>The Chosen One (Anakin)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="itemmcu" class="item">
+                    <img src="static/img/the_chosen_one_DarthVader_var.jpg" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>The Chosen One (Vader)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="itemmcu" class="item">
+                    <img src="static/img/steve.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Steve Rogers (MCU)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="itemmcu" class="item">
+                    <img src="static/img/tony.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Tony Stark<br>(MCU)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/thor.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Thor Odinson (MCU)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/Colors.jpg" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Harry Potter X Book of Magic</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/Final-cropped.jpeg" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Loss (Remake)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/post (2).png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Spider-Man: Far From Home (fan poster 1)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/post.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Spider-Man: Far From Home (fan poster 2)<h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/ShazamTalenthouseEntryLow.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>SHAZAM! (fan poster)</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/reduced.png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Night Swing</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item3" class="item">
+                    <img src="static/img/reduced (2).png" alt="Avatar" width="100%" height="auto">
+                    <div class="cardcontainer">
+                      <h4>Wild Wolverine</h4> 
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In fermentum et sollicitudin ac orci phasellus egestas. Aliquet risus feugiat in ante metus.</p>  -->
+                    </div>
+                  </div>
+                  <div id="item-last" class="item"></div>
+            </div>
+            <br>
+            <div class="talenthouse-seemore">
+                <a class="btn fifth" href="https://www.talenthouse.com/jose-paulo-cabral">View Artworks</a>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <div class="github2-head">
+                <h6>Send a message</h6>
+            </div>
+            <div class="email-form">
+                <form method="GET" action="mailto:test@example.com" enctype="text/plain">
+                    <div class="contact-left-side">
+                        <div><h4>Email</h4></div>
+                        <br>
+                        <input id="e-mail" type="text" name="e-mail" placeholder="E-mail" />
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div><h4>Subject</h4></div>
+                        <br>
+                        <input id="subject" type="text" name="subject" placeholder="Subject"/>
+                    </div>
+
+                    <div class="contact-right-side">
+                        <div><h4>Message</h4></div>
+                        <br>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                        
+                        <br>
+                        <br>
+
+                        <input type="submit" value="Send"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://www.facebook.com/nootnootpaucabral15"><img src="static/img/facebook-normal.PNG"></a></li> <!--Facebook-->
+                    <li><a href="https://www.github.com/paucabral"><img src="static/img/github-normal.PNG"></a></li> <!--Github-->
+                    <li><a href="https://www.talenthouse.com/jose-paulo-cabral"><img src="static/img/talenthouse-normal.PNG"></a></li> <!--Talenthouse-->
+                    <li><a href="https://www.tryhackme.com/p/paucabral"><img src="static/img/tryhackme-normal.PNG"></a></li> <!--Tryhackme-->
+                    <li><a href="https://www.youtube.com/channel/UCWECRYmBVtwj_RyuiIHxFCg"><img src="static/img/youtube-normal.PNG"></a></li> <!--Youtube-->
+                </ul>
+            </div>
+            <div class="footer-text">
+                <!-- <h5 style="font-weight: normal; color: #fff; font-size: 15px; font-family: sans-serif; text-align: center; margin: 0 auto; padding-top: 5rem;">All rights reserved.</h5> -->
+                <h5>2020 | All rights reserved.</h5>
+            </div>
+        </footer>
+
+        <script>
+
+            // Bind all a href clicks to this function
+            $(document).on('click', '#scrollingA', function(event){
+    
+                // Prevent default events
+                event.preventDefault();
+    
+                // Animate the body (html page) to scroll to the referring element 
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 1000);
+    
+            });
+    
+        </script>
+    </body>
+</html>
